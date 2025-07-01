@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useFetching } from '../hooks/useFetching'
 
 import { Loader } from '../components/Loader'
-import { ShopNavBar } from '../routes/ShopNavBar'
+import { NavbarShop } from '../components/NavbarShop'
 import { Outlet, useLocation, useParams } from 'react-router'
 
 // const url = 'https://dummyjson.com/carts'
@@ -53,7 +53,7 @@ export const Shop = () => {
 				{!category && (
 					<>
 						<h2 className="mb-8 text-2xl">Список категорій:</h2>
-						<ShopNavBar
+						<NavbarShop
 							categories={categories}
 							isLoading={isLoadingCategories}
 						/>

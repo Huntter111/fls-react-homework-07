@@ -1,5 +1,5 @@
 import Logo from '../Logo'
-import { Navbar } from '../../routes/Navbar'
+import { Navbar } from '../Navbar'
 
 export const Header = () => {
 	return (

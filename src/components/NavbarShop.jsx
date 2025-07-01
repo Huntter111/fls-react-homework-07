@@ -1,10 +1,11 @@
 import { Link } from 'react-router'
-import { Loader } from '../components/Loader'
+import { Loader } from './Loader'
 
-export const ShopNavBar = ({ categories, isLoading }) => {
+export const NavbarShop = ({ categories, isLoading }) => {
 	if (isLoading) {
 		return (
 			<div>
+				<div className="my-4">Завантажується...</div>
 				<Loader />
 			</div>
 		)
@@ -13,7 +14,7 @@ export const ShopNavBar = ({ categories, isLoading }) => {
 	return (
 		<nav className="flex flex-col items-start gap-2 text-xl ">
 			{!categories.length ? (
-				<div>Категорії не знайдені</div>
+				<div className="my-4">Категорії не знайдені</div>
 			) : (
 				categories.map((category) => (
 					<Link
