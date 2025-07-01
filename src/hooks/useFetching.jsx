@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { sleep } from '../utils/utils'
+// import { sleep } from '../utils/utils'
 
 export const useFetching = (url) => {
 	const [data, setData] = useState(() => [])
@@ -11,7 +11,7 @@ export const useFetching = (url) => {
 
 		const fetchData = async () => {
 			setIsLoading(true)
-			await sleep(1000)
+			// await sleep(500)
 			try {
 				const response = await fetch(url, { signal })
 				if (!response.ok) {

@@ -3,6 +3,10 @@ import { upperFirstLetter } from '../../utils/utils'
 
 export const ProductDetails = () => {
 	const { selectedProduct } = useOutletContext()
+	if (!selectedProduct) {
+		return <div className="my-4 text-xl">Товар не знайдено</div>
+	}
+
 	const {
 		brand,
 		category,
@@ -14,10 +18,7 @@ export const ProductDetails = () => {
 		price,
 		title,
 	} = selectedProduct
-	console.log(' ProductDetails ~ selectedProduct:', selectedProduct)
-	if (!selectedProduct) {
-		return <div className="my-4 text-xl">Товар не знайдено</div>
-	}
+
 	return (
 		<div className="gap-8 p-4 border md:flex">
 			<div className="relative p-2 flex-1/2">
