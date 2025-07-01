@@ -1,3 +1,3 @@
 # React Home Work 7. React Router
 
-[Deploy](https://fls-react-homework-07.netlify.app/):
+Deploy: [FLS-REACT-HOMEWORK-07](https://fls-react-homework-07.netlify.app/)
