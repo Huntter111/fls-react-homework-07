@@ -4,9 +4,10 @@ import { useFetching } from '../hooks/useFetching'
 import { Loader } from '../components/Loader'
 import { NavbarShop } from '../components/NavbarShop'
 import { Outlet, useLocation, useParams } from 'react-router'
+import apiRoutes from '../api/apiRoutes'
 
 // const url = 'https://dummyjson.com/carts'
-const url = 'https://fakestoreapi.in/api/products'
+// const url = 'https://fakestoreapi.in/api/products'
 
 export const Shop = () => {
 	const [carts, setCarts] = useState([])
@@ -15,7 +16,7 @@ export const Shop = () => {
 
 	const { category } = useParams()
 
-	const { data, isLoading, error } = useFetching(url)
+	const { data, isLoading, error } = useFetching(apiRoutes.productsList)
 
 	useEffect(() => {
 		setCarts(data)

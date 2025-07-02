@@ -16,7 +16,7 @@ export const Products = () => {
 	const { category, id } = useParams()
 
 	function info(product) {
-		navigate(`/shop/${category}/${product.id}`)
+		navigate(`${frontRoutes.navigation.shop.index}/${category}/${product.id}`)
 	}
 	const selectedProduct = useMemo(() => {
 		return filteredCarts.find((prod) => prod.id === Number(id))
@@ -26,7 +26,7 @@ export const Products = () => {
 			<div className="flex gap-4 mb-4">
 				{category && !id && (
 					<Link
-						to={frontRoutes.pages.shop.index}
+						to={frontRoutes.navigation.shop.index}
 						className="px-4 py-2 transition-all border hover:text-blue-400"
 					>
 						🠔 До категорій
@@ -34,7 +34,7 @@ export const Products = () => {
 				)}
 				{id && (
 					<Link
-						to={`/shop/${category}`}
+						to={`${frontRoutes.navigation.shop.index}/${category}`}
 						className="px-4 py-2 transition-all border hover:text-blue-400"
 					>
 						🠔 До товарів

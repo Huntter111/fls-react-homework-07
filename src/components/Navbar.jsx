@@ -6,7 +6,7 @@ export const Navbar = () => {
 	return (
 		<nav className="flex flex-wrap gap-4">
 			<NavLink
-				to={frontRoutes.pages.home}
+				to={frontRoutes.navigation.home}
 				className={({ isActive }) =>
 					cn(
 						'hover:text-blue-500 transition-all py-1 px-2 border border-transparent rounded-md',
@@ -19,7 +19,7 @@ export const Navbar = () => {
 				Home
 			</NavLink>
 			<NavLink
-				to={frontRoutes.pages.shop.index}
+				to={frontRoutes.navigation.shop.index}
 				className={({ isActive }) =>
 					cn(
 						'hover:text-blue-500 transition-all py-1 px-2 border border-transparent rounded-md',
@@ -32,7 +32,7 @@ export const Navbar = () => {
 				Shop
 			</NavLink>
 			<NavLink
-				to={frontRoutes.pages.payment}
+				to={frontRoutes.navigation.payment}
 				className={({ isActive }) =>
 					cn(
 						'hover:text-blue-500 transition-all py-1 px-2 border border-transparent rounded-md',
@@ -45,7 +45,7 @@ export const Navbar = () => {
 				Payment
 			</NavLink>
 			<NavLink
-				to={frontRoutes.pages.contacts}
+				to={frontRoutes.navigation.contacts}
 				className={({ isActive }) =>
 					cn(
 						'hover:text-blue-500 transition-all py-1 px-2 border border-transparent rounded-md',

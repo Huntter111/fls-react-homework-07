@@ -12,4 +12,12 @@ export default {
 		payment: '/payment',
 		contacts: '/contacts',
 	},
+	navigation: {
+		home: '/',
+		shop: {
+			index: '/shop',
+		},
+		payment: '/payment',
+		contacts: '/contacts',
+	},
 }
