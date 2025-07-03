@@ -11,7 +11,7 @@ import { useMemo } from 'react'
 
 export const Products = () => {
 	const { filteredCarts } = useOutletContext()
-	// console.log(' Products ~ filteredCarts:', filteredCarts)
+
 	const navigate = useNavigate()
 	const { category, id } = useParams()
 
